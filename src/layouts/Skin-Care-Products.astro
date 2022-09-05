@@ -1,0 +1,9 @@
+---
+import Step from './Step.astro';
+const { frontmatter } = Astro.props;
+---
+
+<Step title={frontmatter.title}>
+{ frontmatter.random }
+  <slot />
+</Step>

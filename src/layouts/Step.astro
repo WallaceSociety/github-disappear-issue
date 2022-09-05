@@ -1,0 +1,16 @@
+---
+import Page from './Page.astro';
+import MainContent from '../svelte/MainContent.svelte'; //This is the issue
+
+export interface Props {
+  title: string;
+}
+
+const { title } = Astro.props as Props;
+---
+
+  <Page title={title}>
+    <MainContent>
+      <slot />
+    </MainContent>
+  </paage>
